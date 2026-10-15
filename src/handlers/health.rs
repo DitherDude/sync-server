@@ -37,7 +37,6 @@ async fn health_state() -> impl Responder {
 #[get("/meta")]
 async fn server_metainfo() -> HandlerResult<impl Responder> {
     Ok(HttpResponse::Ok().json(MetaResponse {
-        status: "ok".into(),
         api: MetaResponseApi {
             base: env!("CARGO_PKG_VERSION").into(),
         },

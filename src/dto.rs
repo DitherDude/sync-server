@@ -176,7 +176,6 @@ pub struct JwtClaims {
 
 #[derive(Debug, Clone, Serialize, Deserialize, ToSchema)]
 pub struct MetaResponse {
-    pub status: String,
     pub api: MetaResponseApi,
     pub version: String,
     #[serde(flatten)]
